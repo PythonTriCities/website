@@ -5,8 +5,10 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def hello_world():
-    return 'Hello, World!'
+def better_page():
+    return render_template('better.html',
+                           my_string="Python is fun!",
+                           my_list=[0, 1, 2, 3, 4, 5])
 
 
 @app.route('/projects/')
