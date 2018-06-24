@@ -5,11 +5,8 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def better_page():
-    return render_template('better.html',
-                           my_string="Python is fun!",
-                           my_list=[0, 1, 2, 3, 4, 5])
-
+def index_page():
+    return render_template('index.html')
 
 @app.route('/projects/')
 def projects():
