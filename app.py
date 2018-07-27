@@ -1,18 +1,7 @@
-"""
-NOTES:
-    -Why the difference in the @app.route format? /site vs /site/
-    -Where are the board post going? Main page or dedicated?
-TODO:
-    -Add link to homepage from the about page, project page, and members page
-    -Add background picture or design for now
-    -Add a sign-up button to a link on the homepage
-    -Add a schedule/calendar to a link on the homepage
-    -Add an announcement and updates area on homepage
-"""
 from flask import Flask
 from flask import render_template
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static', static_folder='/static')
 
 announcements = [{
                     'title':'First Announcement',
@@ -30,23 +19,24 @@ announcements = [{
 def index_page():
     return render_template('index.html', announcements=announcements)
 
-@app.route('/projects/')
-def projects():
-    return render_template('projects.html')
-
-
 @app.route('/about')
 def about():
     return render_template('about.html')
-
-
-@app.route('/members')
-def members():
-    return render_template('members.html')
-
 
 @app.route('/hello/')
 @app.route('/hello/<name>')
 def hello(name=None):
     return render_template('hello.html', name=name)
+
+@app.route('/members')
+def members():
+    return render_template('members.html')
+
+@app.route('/projects/')
+def projects():
+    return render_template('projects.html')
+
+@app.route('/login')
+def login_page():
+    return render_template('login-page.html')
 
