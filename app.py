@@ -1,3 +1,4 @@
+
 from flask import Flask
 from flask import render_template
 
@@ -18,6 +19,10 @@ announcements = [{
 @app.route('/')
 def index_page():
     return render_template('index.html', announcements=announcements)
+
+@app.route('/projects/')
+def projects():
+    return 'The project page'
 
 @app.route('/about')
 def about():
