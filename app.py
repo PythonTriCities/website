@@ -20,10 +20,6 @@ announcements = [{
 def index_page():
     return render_template('index.html', announcements=announcements)
 
-@app.route('/projects/')
-def projects():
-    return 'The project page'
-
 @app.route('/about')
 def about():
     return render_template('about.html')
@@ -44,4 +40,3 @@ def projects():
 @app.route('/login')
 def login_page():
     return render_template('login-page.html')
-
