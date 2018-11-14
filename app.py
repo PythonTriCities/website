@@ -1,8 +1,7 @@
-
 from flask import Flask
 from flask import render_template
 
-app = Flask(__name__, static_url_path='/static', static_folder='/static')
+app = Flask(__name__, static_url_path='/static')
 
 announcements = [{
                     'title':'First Announcement',
@@ -18,18 +17,21 @@ announcements = [{
 
 @app.route('/')
 def index_page():
+    #show announcements, most recent one first
+    #db = get_db()
+    #posts = db.execute(
+    #    'SELECT p.id, title, body, created, author_id, username'
+    #    'FROM post p JOIN user u ON p.author_id = u.id'
+    #    'ORDER BY created DESC'
+    #).fetchall()
     return render_template('index.html', announcements=announcements)
-
-@app.route('/projects/')
-def projects():
-    return 'The project page'
 
 @app.route('/about')
 def about():
     return render_template('about.html')
 
 @app.route('/hello/')
-@app.route('/hello/<name>')
+@app.route('/hello/<string:name>')
 def hello(name=None):
     return render_template('hello.html', name=name)
 
