@@ -2,8 +2,7 @@
 
 This is the repository for the group website.
 
-It will use the flask framework, because is a 
-great way to get started!
+It will use the flask framework, because it's a great way to get started!
 
 ## Getting Started
 
