@@ -1,10 +1,11 @@
+#!/usr/bin/env python3
 import urllib.request
-test_str = b'Python Tri Cities Website'
+needle = b'Python Tri Cities Website'
 req = urllib.request.Request('http://localhost:5000')
 
 with urllib.request.urlopen(req) as response:
-    page = response.read()
-    if test_str in page:
+    haystack = response.read()
+    if needle in haystack:
         print('Passed')
     else:
         print('Failed')
