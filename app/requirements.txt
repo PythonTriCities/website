@@ -1,6 +1,5 @@
 Click==7.0
 entrypoints==0.3
-flake8==3.7.4
 Flask==1.0.2
 Flask-SQLAlchemy==2.3.2
 itsdangerous==1.1.0
