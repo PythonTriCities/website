@@ -48,7 +48,8 @@ git clone git@github.com:PythonTriCities/website.git
 From the website directory:
 
 ```
-python app/app.py
+python app/app.py -or-
+python3 app/app.py
 ```
 
 Then go to:
