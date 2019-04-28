@@ -1,68 +1,144 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PythonTriCities.org</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <style type="text/css">
-      .container {
-        max-width: 500px;
-        padding-top: 200px;
-      }
-    </style>
-  </head>
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">PyTC!</a>
-    </div>
+<!DOCTYPE HTML>
+<!--
+	Projection by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="static/css/main.css" />
+	</head>
+	<body>
 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="/login">Log-in</a></li>
-        <li><a href="#">Sign-up</a></li>
-      </ul>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="/members">Members</a></li>
-            <li class="divider"></li>
-            <li><a href="/hello">Hello</a></li>
-            <li><a href="/projects/">Projects</a></li>
-            <li><a href="/about">About</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
- <body>
-    <div class="container">
-      <br>
-      {% block content %}{% endblock %}
-      <br>
-    </div>
-    <div align="left">
-        {% for post in announcements %}
-            <h3>{{ post.title }}</h3>
-            <p>{{ post.date_posted }}</p>
-            <p>{{ post.content }}</p>
-        {% endfor %}
-    </div>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  </body>
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+                    <!-- Maybe have this logo be the drop down menu if possible? -->
+					<!--<a href="/" class="logo"><strong>Python Tri-Cities</strong></a>-->
+					<a class="logo"><strong>Python Tri-Cities</strong></a>
+					<nav id="nav">
+						<a href="https://github.com/PythonTriCities/">GitHub</a>
+						<a href="/projects">Projects</a>
+                        <a href="#">Login</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<header>
+						<h1>Welcome to Python Tri-Cities</h1>
+					</header>
+
+					<div class="flex ">
+
+						<div>
+							<span class="icon fa-car"></span>
+							<h3>Project 1</h3>
+							<p>Project 1 Description</p>
+						</div>
+
+						<div>
+							<span class="icon fa-camera"></span>
+							<h3>Project 2</h3>
+							<p>Project 2 Description</p>
+						</div>
+
+						<div>
+							<span class="icon fa-bug"></span>
+							<h3>Project 3</h3>
+							<p>Project 3 Description</p>
+						</div>
+
+					</div>
+
+					<footer>
+						<a href="#" class="button">Get Started</a>
+					</footer>
+				</div>
+			</section>
+
+
+		<!-- Three -->
+			<section id="three" class="wrapper align-center">
+				<div class="inner">
+					<div class="flex flex-2">
+						<article>
+							<div class="image round">
+								<img src="static/images/rpl.jpg" alt="Pic 01" />
+							</div>
+							<header>
+								<!--<h3>Richland Public Library</h3>-->
+							    <h3>Sed feugiat<br /> tempus adipicsing</h3>
+							    <p>Pellentesque fermentum dolor. Aliquam quam lectus<br />facilisis auctor, ultrices ut, elementum vulputate, nunc<br /> blandit ellenste egestagus commodo.</p>
+							</header>
+							<footer>
+								<a href="#" class="button">Learn More</a>
+							</footer>
+						</article>
+						<article>
+							<div class="image round">
+								<img src="static/images/rpl.jpg" alt="Pic 02" />
+							</div>
+							<header>
+								<h3>Sed feugiat<br /> tempus adipicsing</h3>
+							</header>
+							<p>Pellentesque fermentum dolor. Aliquam quam lectus<br />facilisis auctor, ultrices ut, elementum vulputate, nunc<br /> blandit ellenste egestagus commodo.</p>
+							<footer>
+								<a href="#" class="button">Learn More</a>
+							</footer>
+						</article>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+
+					<h3>Get in touch</h3>
+
+					<!--<form action="#" method="post">-->
+					--<form action="#" method="#">
+
+						<div class="field half first">
+							<label for="name">Name</label>
+							<input name="name" id="name" type="text" placeholder="Name">
+						</div>
+						<div class="field half">
+							<label for="email">Email</label>
+							<input name="email" id="email" type="email" placeholder="Email">
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+						</div>
+                        <!--
+						<ul class="actions">
+							<li><input value="Send Message" class="button alt" type="submit"></li>
+						</ul>
+                        -->
+						<div class="actions">
+							<li><input value="Send Message" class="button alt" type="submit"></li>
+						</div>
+					</form>
+
+					<div class="copyright">
+						&copy; <a href="https://templated.co">Templated </a><a href="https://unsplash.com"> Unsplash</a>.
+					</div>
+
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/skel.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+
+	</body>
 </html>

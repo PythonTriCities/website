@@ -48,7 +48,8 @@ git clone git@github.com:PythonTriCities/website.git
 From the website directory:
 
 ```
-python app/app.py
+python app/app.py -or-
+python3 app/app.py
 ```
 
 Then go to:
@@ -96,7 +97,7 @@ See the list of [contributors](https://github.com/PythonTriCities/website/graphs
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+This project is licensed under the MIT and Creative Commons License - see the [LICENSE](docs/LICENSE) file for details
 
 ## Acknowledgments
 
