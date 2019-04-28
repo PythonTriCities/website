@@ -1,0 +1,14 @@
+{% block content %}
+from flask_wtf import FlaskForm
+from wtforms import StringField
+from wtforms.validators import DataRequired, Length
+
+class LoginForm(FlaskForm):
+    #username = StringField('Username', validators=[DataRequired(), Length(min=10, max=255)])
+
+    email = StringField('Email', validators=[DataRequired(), Email()])
+
+    password = PasswordField('Password', validators=[DataRequired(), Length(min=10, max=255)])
+     
+    submit = SubmitField('Login')
+{% endblock %} 
