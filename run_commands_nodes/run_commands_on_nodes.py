@@ -11,7 +11,7 @@ def sshConnect():
     if __name__=='__main__':
         sshCommand(hosts, 22, a[1], passWord, command_run)
 
-#error if command is not configured correctly, needs; python f5_address user
+#error if command is not configured correctly, needs user
 if len(sys.argv) < 2:
     print ("Usage %s username" % sys.argv[0])
     sys.exit()
