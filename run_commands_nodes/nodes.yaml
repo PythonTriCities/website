@@ -1,0 +1,7 @@
+node_stack1:
+  node1: fqdn1
+  node2: fqdn2
+node_stack2:
+  node1: fqdn1
+  node2: fqdn2
+  node3: fqdn3

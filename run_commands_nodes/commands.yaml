@@ -1,0 +1,6 @@
+command1:
+  command_to_run_1: 'ls -l /etc/'
+  command_to_run_2: 'uname -n'
+command2:
+  tomcat: 'service tomcat start'
+  apache: 'service httpd start'
